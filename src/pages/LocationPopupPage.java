@@ -48,7 +48,7 @@ public class LocationPopupPage extends BasicPage {
 	public void closePopup() {
 		this.getCloseElement().click();
 	}
-}
+    }
 
 	
 
