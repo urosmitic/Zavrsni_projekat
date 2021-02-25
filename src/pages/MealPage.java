@@ -24,15 +24,13 @@ public class MealPage extends BasicPage {
 	public void addMealToCart(int quant) {
 		String quantity = String.valueOf(quant);
 		
-		this.getQuantInput().sendKeys(Keys.chord(Keys.CONTROL, "a"));
+		this.getQuantInput().sendKeys(Keys.CONTROL, "a");
 		this.getQuantInput().sendKeys(quantity);
 		this.getAddToCart().click();
 	}
 	
 	public void addMealFavorite() {
 		this.getFavoriteBtn().click();
-
-
-
-	}
+    }
+	
     }
