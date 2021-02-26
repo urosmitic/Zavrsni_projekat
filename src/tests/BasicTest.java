@@ -30,6 +30,7 @@ import pages.LoginPage;
 import pages.MealPage;
 import pages.NotificationSystemPage;
 import pages.ProfilePage;
+import pages.SearchResultPage;
 
 public abstract class BasicTest {
 	
@@ -43,6 +44,7 @@ public abstract class BasicTest {
 	protected AuthPage auth;
 	protected MealPage meal;
 	protected CartSummaryPage cart;
+	protected SearchResultPage search;
 	
 	protected String baseURL = "http://demo.yo-meals.com";
 	protected String demoEmail = "customer@dummyid.com";
@@ -61,7 +63,7 @@ public abstract class BasicTest {
 		this.auth = new AuthPage(driver , waiter , js);
 		this.meal = new MealPage(driver , waiter , js);
 		this.cart = new CartSummaryPage(driver , waiter , js);
-		
+        this.search = new SearchResultPage (driver , waiter , js);
 		this.driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		this.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		this.driver.manage().window().maximize();
